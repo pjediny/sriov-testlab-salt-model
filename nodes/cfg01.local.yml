@@ -1,0 +1,11 @@
+classes:
+- cluster.sriov.infra.config
+- cluster.sriov.infra.kvm
+parameters:
+  _param:
+    linux_system_codename: xenial
+    reclass_data_revision: master
+  linux:
+    system:
+      name: cfg01
+      domain: local
