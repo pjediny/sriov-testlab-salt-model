@@ -144,7 +144,7 @@ parameters:
           - ${_param:openstack_database_node03_hostname}
           - ${_param:openstack_database_node03_hostname}.${_param:cluster_domain}
         cmp01:
-          address: ${_param:openstack_compute_node01_control_address}
+          address: ${_param:openstack_compute_node01_single_address}
           names:
           - ${_param:openstack_compute_node01_hostname}
           - ${_param:openstack_compute_node01_hostname}${_param:cluster_domain}
