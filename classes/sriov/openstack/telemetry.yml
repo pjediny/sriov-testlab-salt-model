@@ -11,7 +11,7 @@ parameters:
   _param:
     keepalived_openstack_telemetry_vip_address: ${_param:openstack_telemetry_address}
     keepalived_openstack_telemetry_vip_password: ${_param:openstack_telemetry_keepalived_password}
-    keepalived_openstack_telemetry_vip_interface: eth1
+    keepalived_openstack_telemetry_vip_interface: eth0
     cluster_vip_address: ${_param:openstack_telemetry_address}
     cluster_local_address: ${_param:single_address}
     cluster_node01_hostname: mdb01
@@ -23,4 +23,4 @@ parameters:
   linux:
     network:
       interface:
-        eth1: ${_param:linux_single_interface}
+        eth0: ${_param:linux_single_interface}

@@ -54,7 +54,7 @@ parameters:
     mongodb_ceilometer_password: EEEEEEEEEEEEEEEE
     mongodb_admin_password: EEEEEEEEEEEEEEEE
     mongodb_shared_key: EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
-    metadata_password: EEEEEEEEEEEEEEEE
+    metadata_password: EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
     openstack_telemetry_keepalived_password: EEEEEEEEEEEEEEEE
     # Billing
     #keystone_billometer_password: EEEEEEEEEEEEEEEE

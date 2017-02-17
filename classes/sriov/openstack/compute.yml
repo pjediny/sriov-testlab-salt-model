@@ -1,11 +1,10 @@
 classes:
 
-- system.linux.system.repo.mos9
-
-- system.linux.system.repo.contrail
+#- system.linux.system.repo.mos9
+#- system.linux.system.repo.contrail
 - system.nova.compute.cluster
 - system.opencontrail.compute.cluster
-- system.ceilometer.agent.cluster
+#- system.ceilometer.agent.cluster
 - cluster.sriov
 parameters:
   _param:
@@ -19,6 +18,33 @@ parameters:
     cluster_node03_address: ${_param:openstack_control_node03_address}
     opencontrail_compute_address: ${_param:single_address}
     nova_vncproxy_url: http://${_param:openstack_proxy_address}:6080
+  linux:
+    system:
+      repo:
+        contrail:
+          source: "deb http://apt-mk.mirantis.com/xenial/ nightly mitaka oc311 extra"
+          architectures: amd64
+          key_url: "http://apt-mk.mirantis.com/public.gpg"
+        mcp_mitaka:
+          source: "deb http://perestroika-repo-tst.infra.mirantis.net/mcp-repos/1.0 mitaka main"
+          architectures: amd64
+          key_url: "http://perestroika-repo-tst.infra.mirantis.net/mcp-repos/1.0/archive-mcp1.0.key"
+        mcp_mitaka_hotfix:
+          source: "deb http://perestroika-repo-tst.infra.mirantis.net/mcp-repos/1.0 mitaka-hotfix main"
+          architectures: amd64
+          key_url: "http://perestroika-repo-tst.infra.mirantis.net/mcp-repos/1.0/archive-mcp1.0.key"
+        mcp_mitaka_updates:
+          source: "deb http://perestroika-repo-tst.infra.mirantis.net/mcp-repos/1.0 mitaka-updates main"
+          architectures: amd64
+          key_url: "http://perestroika-repo-tst.infra.mirantis.net/mcp-repos/1.0/archive-mcp1.0.key"
+        mcp_mitaka_security:
+          source: "deb http://perestroika-repo-tst.infra.mirantis.net/mcp-repos/1.0 mitaka-security main"
+          architectures: amd64
+          key_url: "http://perestroika-repo-tst.infra.mirantis.net/mcp-repos/1.0/archive-mcp1.0.key"
+        mcp_mitaka_holdback:
+          source: "deb http://perestroika-repo-tst.infra.mirantis.net/mcp-repos/1.0 mitaka-holdback main"
+          architectures: amd64
+          key_url: "http://perestroika-repo-tst.infra.mirantis.net/mcp-repos/1.0/archive-mcp1.0.key"
 ##FIXME
  # linux:
  #   network:

@@ -6,8 +6,8 @@ classes:
 - cluster.sriov.infra
 - cluster.sriov.openstack
 - cluster.sriov.opencontrail
-- cluster.sriov.stacklight
-- cluster.sriov.stacklight.client
+#- cluster.sriov.stacklight
+#- cluster.sriov.stacklight.client
 parameters:
   _param:
     openstack_version: mitaka
@@ -15,7 +15,7 @@ parameters:
     stacklight_environment: ${_param:cluster_domain}
     reclass_data_revision: master
     cluster_name: sriov
-    cluster_public_host: 
+    cluster_public_host:  
     infra_config_hostname: cfg01
     ##local repositiry for aptly
     #local_repo_url: ip_address
@@ -25,13 +25,9 @@ parameters:
     infra_config_address: 10.0.175.201
     infra_config_deploy_address: 10.0.175.201
 
-    infra_compute_address: 10.0.175.201
     infra_compute_node01_address: 10.0.175.201
     infra_compute_node02_address: 10.0.175.202
     infra_compute_node03_address: 10.0.175.203
-    infra_compute_node01_deploy_address: 10.167.5.241
-    infra_compute_node02_deploy_address: 10.167.5.242
-    infra_compute_node03_deploy_address: 10.167.5.243
     infra_compute_node01_hostname: kvm01
     infra_compute_node02_hostname: kvm02
     infra_compute_node03_hostname: kvm03
@@ -71,25 +67,25 @@ parameters:
     opencontrail_control_node02_address: 10.0.175.223
     opencontrail_control_node03_address: 10.0.175.224
     # StackLight monitoring
-    stacklight_monitor_address: 10.167.4.70
-    stacklight_monitor_node01_address: 10.167.4.71
-    stacklight_monitor_node02_address: 10.167.4.72
-    stacklight_monitor_node03_address: 10.167.4.73
-    stacklight_log_address: 10.167.4.60
-    stacklight_log_node01_address: 10.167.4.61
-    stacklight_log_node02_address: 10.167.4.62
-    stacklight_log_node03_address: 10.167.4.63
-    stacklight_telemetry_address: 10.167.4.85
-    stacklight_telemetry_node01_address: 10.167.4.86
-    stacklight_telemetry_node02_address: 10.167.4.87
-    stacklight_telemetry_node03_address: 10.167.4.88
+    # stacklight_monitor_address: 10.167.4.70
+    # stacklight_monitor_node01_address: 10.167.4.71
+    # stacklight_monitor_node02_address: 10.167.4.72
+    # stacklight_monitor_node03_address: 10.167.4.73
+    # stacklight_log_address: 10.167.4.60
+    # stacklight_log_node01_address: 10.167.4.61
+    # stacklight_log_node02_address: 10.167.4.62
+    # stacklight_log_node03_address: 10.167.4.63
+    # stacklight_telemetry_address: 10.167.4.85
+    # stacklight_telemetry_node01_address: 10.167.4.86
+    # stacklight_telemetry_node02_address: 10.167.4.87
+    # stacklight_telemetry_node03_address: 10.167.4.88
     # openstack compute
     openstack_compute_node01_single_address: 10.167.2.101
-    openstack_compute_node02_single_address: 10.167.2.102
-    openstack_compute_node03_single_address: 10.167.2.103
-    openstack_compute_node01_control_address: 10.167.4.101
-    openstack_compute_node02_control_address: 10.167.4.102
-    openstack_compute_node03_control_address: 10.167.4.103
+    # openstack_compute_node02_single_address: 10.167.2.102
+    # openstack_compute_node03_single_address: 10.167.2.103
+    # openstack_compute_node01_control_address: 10.167.4.101
+    # openstack_compute_node02_control_address: 10.167.4.102
+    # openstack_compute_node03_control_address: 10.167.4.103
 
     # openstack service hostnames
     openstack_proxy_hostname: prx
@@ -118,22 +114,22 @@ parameters:
     opencontrail_control_node02_hostname: ntw02
     opencontrail_control_node03_hostname: ntw03
     # stacklight service hostnames
-    stacklight_monitor_hostname: mon
-    stacklight_monitor_node01_hostname: mon01
-    stacklight_monitor_node02_hostname: mon02
-    stacklight_monitor_node03_hostname: mon03
-    stacklight_log_hostname: log
-    stacklight_log_node01_hostname: log01
-    stacklight_log_node02_hostname: log02
-    stacklight_log_node03_hostname: log03
-    stacklight_telemetry_hostname: mtr
-    stacklight_telemetry_node01_hostname: mtr01
-    stacklight_telemetry_node02_hostname: mtr02
-    stacklight_telemetry_node03_hostname: mtr03
+    # stacklight_monitor_hostname: mon
+    # stacklight_monitor_node01_hostname: mon01
+    # stacklight_monitor_node02_hostname: mon02
+    # stacklight_monitor_node03_hostname: mon03
+    # stacklight_log_hostname: log
+    # stacklight_log_node01_hostname: log01
+    # stacklight_log_node02_hostname: log02
+    # stacklight_log_node03_hostname: log03
+    # stacklight_telemetry_hostname: mtr
+    # stacklight_telemetry_node01_hostname: mtr01
+    # stacklight_telemetry_node02_hostname: mtr02
+    # stacklight_telemetry_node03_hostname: mtr03
     # openstack compute
     openstack_compute_node01_hostname: cmp001
-    openstack_compute_node02_hostname: cmp002
-    openstack_compute_node03_hostname: cmp003
+    # openstack_compute_node02_hostname: cmp002
+    # openstack_compute_node03_hostname: cmp003
 
     ##CI/CD
     #infra_integration_node01_single_address:

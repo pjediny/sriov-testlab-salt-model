@@ -1,13 +1,12 @@
 classes:
 
-- system.linux.system.repo.mos9
-
-- system.linux.system.repo.contrail
+- system.linux.system.repo.mos92
+#- system.linux.system.repo.contrail
 - system.opencontrail.control.analytics
 - cluster.sriov
 parameters:
   _param:
-    keepalived_vip_interface: eth1
+    keepalived_vip_interface: eth0
     keepalived_vip_virtual_router_id: 70
     cluster_vip_address: ${_param:opencontrail_analytics_address}
     cluster_local_address: ${_param:single_address}
@@ -20,4 +19,10 @@ parameters:
   linux:
     network:
       interface:
-        eth1: ${_param:linux_single_interface}
+        eth0: ${_param:linux_single_interface}
+    system:
+      repo:
+        contrail:
+          source: "deb http://apt-mk.mirantis.com/trusty/ nightly mitaka oc311 extra"
+          architectures: amd64
+          key_url: "http://apt-mk.mirantis.com/public.gpg"

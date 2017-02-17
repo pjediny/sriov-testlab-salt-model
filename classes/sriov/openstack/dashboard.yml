@@ -12,4 +12,4 @@ parameters:
   linux:
     network:
       interface:
-        eth1: ${_param:linux_single_interface}
+        eth0: ${_param:linux_single_interface}

@@ -5,8 +5,8 @@ classes:
 - system.linux.system.repo.tcp_extra
 - system.memcached.server.single
 - system.linux.system.repo.saltstack_2016_3_trusty 
-- system.ceilometer.client
-- system.ceilometer.client.neutron
+#- system.ceilometer.client
+#- system.ceilometer.client.neutron
 - system.keystone.server.cluster
 - system.glance.control.cluster
 - system.nova.control.cluster
@@ -16,10 +16,13 @@ classes:
 - system.glusterfs.client.cluster
 - system.glusterfs.client.volume.glance
 - system.glusterfs.client.volume.keystone
+- system.glusterfs.server.volume.glance
+- system.glusterfs.server.volume.keystone
+- system.glusterfs.server.cluster
 - cluster.sriov
 parameters:
   _param:
-    keepalived_vip_interface: eth1
+    keepalived_vip_interface: eth0
     keepalived_vip_virtual_router_id: 50
     cluster_vip_address: ${_param:openstack_control_address}
     cluster_local_address: ${_param:single_address}
@@ -33,4 +36,4 @@ parameters:
   linux:
     network:
       interface:
-        eth1: ${_param:linux_single_interface}
+        eth0: ${_param:linux_single_interface}
