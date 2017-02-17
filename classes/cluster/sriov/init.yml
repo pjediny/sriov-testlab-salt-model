@@ -49,10 +49,10 @@ parameters:
     openstack_message_queue_node02_address: 10.0.175.214
     openstack_message_queue_node03_address: 10.0.175.215
 
-    openstack_telemetry_address: 10.167.4.75
-    openstack_telemetry_node01_address: 10.167.4.76
-    openstack_telemetry_node02_address: 10.167.4.77
-    openstack_telemetry_node03_address: 10.167.4.78
+    # openstack_telemetry_address: 10.167.4.75
+    # openstack_telemetry_node01_address: 10.167.4.76
+    # openstack_telemetry_node02_address: 10.167.4.77
+    # openstack_telemetry_node03_address: 10.167.4.78
 
     # Billing
     #openstack_billing_address:
@@ -80,7 +80,7 @@ parameters:
     # stacklight_telemetry_node02_address: 10.167.4.87
     # stacklight_telemetry_node03_address: 10.167.4.88
     # openstack compute
-    openstack_compute_node01_single_address: 10.167.2.101
+    openstack_compute_node01_single_address: 10.0.106.112
     # openstack_compute_node02_single_address: 10.167.2.102
     # openstack_compute_node03_single_address: 10.167.2.103
     # openstack_compute_node01_control_address: 10.167.4.101
