@@ -20,7 +20,7 @@ classes:
 parameters:
   _param:
     salt_master_base_environment: dev
-    reclass_data_repository: "git@github.com:pjediny/sriov-testlab-salt-model.git"
+    reclass_data_repository: "https://github.com/pjediny/sriov-testlab-salt-model.git"
     reclass_data_revision: master
     reclass_config_master: ${_param:infra_config_deploy_address}
     single_address: ${_param:infra_config_address}
@@ -44,21 +44,21 @@ parameters:
             salt_master_host: ${_param:reclass_config_master}
             linux_system_codename: xenial
             single_address: ${_param:openstack_compute_node01_single_address}
-        fuel_compute_node02:
+        infra_compute_node02:
           name: kvm02
           domain: ${_param:cluster_domain}
           classes:
-          - cluster.${_param:cluster_name}.fuel.compute
+          - cluster.${_param:cluster_name}.infra.kvm
           params:
             salt_master_host: ${_param:reclass_config_master}
             linux_system_codename: xenial
-            single_address: ${_param:fuel_compute_node02_address}
-        fuel_compute_node03:
+            single_address: ${_param:infra_compute_node02_address}
+        infra_compute_node03:
           name: kvm03
           domain: ${_param:cluster_domain}
           classes:
-          - cluster.${_param:cluster_name}.fuel.compute
+          - cluster.${_param:cluster_name}.infra.kvm
           params:
             salt_master_host: ${_param:reclass_config_master}
             linux_system_codename: xenial
-            single_address: ${_param:fuel_compute_node03_address}
+            single_address: ${_param:infra_compute_node03_address}
