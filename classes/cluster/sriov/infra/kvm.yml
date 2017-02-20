@@ -1,5 +1,7 @@
 classes:
 - system.linux.system.repo.mos9
+- system.linux.system.repo.tcp_base
+- system.linux.system.repo.tcp_extra
 - system.salt.control.virt
 - system.salt.control.cluster.opencontrail_analytics_cluster
 - system.salt.control.cluster.opencontrail_control_cluster
