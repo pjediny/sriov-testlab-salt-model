@@ -15,7 +15,7 @@ parameters:
     stacklight_environment: ${_param:cluster_domain}
     reclass_data_revision: master
     cluster_name: sriov
-    cluster_public_host:  
+    cluster_public_host: 10.0.175.225
     infra_config_hostname: cfg01
     ##local repositiry for aptly
     #local_repo_url: ip_address
@@ -127,7 +127,7 @@ parameters:
     # stacklight_telemetry_node02_hostname: mtr02
     # stacklight_telemetry_node03_hostname: mtr03
     # openstack compute
-    openstack_compute_node01_hostname: cmp001
+    openstack_compute_node01_hostname: cmp01
     # openstack_compute_node02_hostname: cmp002
     # openstack_compute_node03_hostname: cmp003
 

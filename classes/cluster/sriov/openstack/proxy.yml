@@ -11,7 +11,7 @@ classes:
 - service.keepalived.cluster.single
 - cluster.sriov
 - cluster.sriov.openstack.dashboard
-- cluster.sriov.stacklight.proxy
+#- cluster.sriov.stacklight.proxy
 parameters:
   _param:
     openstack_version: liberty
@@ -19,11 +19,11 @@ parameters:
     keepalived_vip_virtual_router_id: 240
     nginx_proxy_ssl:
       enabled: true
-      authority: mk_lab_ca
+      authority: salt_master_ca
       engine: salt
       mode: secure
     cluster_vip_address: ${_param:openstack_proxy_address}
-    salt_minion_ca_host: cfg01.${_param:cluster_domain}
+    salt_minion_ca_host: kvm01.${_param:cluster_domain}
   linux:
     network:
       interface:

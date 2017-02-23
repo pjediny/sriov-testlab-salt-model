@@ -16,6 +16,7 @@ classes:
 #- system.reclass.storage.system.stacklight_log_cluster
 #- system.reclass.storage.system.stacklight_monitor_cluster
 #- system.reclass.storage.system.stacklight_telemetry_cluster
+#- system.reclass.storage.system.openstack_compute_single
 - cluster.sriov
 parameters:
   _param:
