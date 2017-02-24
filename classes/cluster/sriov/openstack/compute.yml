@@ -50,10 +50,9 @@ parameters:
       unsafe_interrupts: True
   nova:
     compute:
-      sriov:
-        sriov_nic01: enp21s0f1
+        sriov_nic01_device_name: enp21s0f1
         sriov_nic01_numvfs: 7
-        srivo_nic_physical_network: physnet1
+        sriov_nic01_physical_network: physnet1
 
             
 ##FIXME
