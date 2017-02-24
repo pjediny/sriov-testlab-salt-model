@@ -4,6 +4,7 @@ classes:
 - system.nova.compute.cluster
 - system.opencontrail.compute.cluster
 #- system.ceilometer.agent.cluster
+- system.nova.compute.sriov
 - cluster.sriov
 parameters:
   _param:
