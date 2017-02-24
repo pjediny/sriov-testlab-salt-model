@@ -18,9 +18,6 @@ parameters:
     cluster_node03_address: ${_param:openstack_control_node03_address}
     opencontrail_compute_address: ${_param:single_address}
     nova_vncproxy_url: http://${_param:openstack_proxy_address}:6080
-    sriov_nic01: enp21s0f1
-    sriov_nic01_numvfs: 7
-    srivo_nic_physical_network: physnet1
   linux:
     system:
       repo:
@@ -51,6 +48,11 @@ parameters:
     kernel:
       sriov: True
       unsafe_interrupts: True
+  nova:
+    compute:
+      sriov_nic01: enp21s0f1
+      sriov_nic01_numvfs: 7
+      srivo_nic_physical_network: physnet1
 
             
 ##FIXME
