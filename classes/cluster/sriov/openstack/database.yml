@@ -28,6 +28,14 @@ parameters:
     cluster_node03_hostname: dbs03
     cluster_node03_address: ${_param:openstack_database_node03_address}
   linux:
+    storage:
+      enabled: true
+      swap:
+        file:
+          enabled: true
+          engine: file
+          device: /swapfile
+          size: 8192
     network:
       interface:
         eth0: ${_param:linux_single_interface}
