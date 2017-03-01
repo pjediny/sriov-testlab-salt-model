@@ -1,5 +1,10 @@
 classes:
+### replace this
 - system.linux.system.repo.tcp_mk20
+### replaced by when ready
+# - system.linux.system.repo.mos92
+- system.linux.system.repo.saltstack_2016_3_trusty 
+###
 - system.nginx.server.single
 - system.nginx.server.proxy.opencontrail_web
 - system.nginx.server.proxy.openstack_api

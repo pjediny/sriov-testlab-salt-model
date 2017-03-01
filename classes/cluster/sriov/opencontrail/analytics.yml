@@ -1,6 +1,9 @@
 classes:
 
 - system.linux.system.repo.mos92
+#- system.linux.system.repo.tcp_extra
+- system.linux.system.repo.saltstack_2016_3_trusty
+
 #- system.linux.system.repo.contrail
 - system.opencontrail.control.analytics
 - cluster.sriov

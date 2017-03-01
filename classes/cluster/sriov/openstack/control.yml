@@ -3,10 +3,9 @@ classes:
 # this repo is only for xenial
 #- system.linux.system.repo.mcp10
 - system.linux.system.repo.mos92
-
-- system.linux.system.repo.tcp_extra
-- system.memcached.server.single
+#- system.linux.system.repo.tcp_extra
 - system.linux.system.repo.saltstack_2016_3_trusty 
+- system.memcached.server.single
 #- system.ceilometer.client
 #- system.ceilometer.client.neutron
 - system.keystone.server.cluster
