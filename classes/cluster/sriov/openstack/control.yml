@@ -1,6 +1,8 @@
 classes:
 
-- system.linux.system.repo.mcp10
+# this repo is only for xenial
+#- system.linux.system.repo.mcp10
+- system.linux.system.repo.mos92
 
 - system.linux.system.repo.tcp_extra
 - system.memcached.server.single
