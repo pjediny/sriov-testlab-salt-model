@@ -39,7 +39,7 @@ parameters:
           net_profile: local
         openstack.database:
           cpu: 2
-          ram: 4096
+          ram: 6144
           disk_profile: large
           net_profile: local
         openstack.message_queue:
