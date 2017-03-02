@@ -24,6 +24,7 @@ parameters:
     sriov_nic01_device_name: enp21s0f1
     sriov_nic01_numvfs: 7
     sriov_nic01_physical_network: physnet1
+    sriov_unsafe_interrupts: True
 
   linux:
     system:
@@ -34,7 +35,6 @@ parameters:
           key_url: "http://apt-mk.mirantis.com/public.gpg"
     kernel:
       sriov: True
-      unsafe_interrupts: True
             
 ##FIXME
  # linux:
