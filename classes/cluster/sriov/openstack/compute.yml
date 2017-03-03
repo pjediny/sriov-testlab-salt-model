@@ -36,11 +36,11 @@ parameters:
     storage:
       multipath:
         enabled: true
-        blacklist_devices:
-          - /dev/sda
-          - /dev/sdb
-          - /dev/sdc
-          - /dev/sdd
+        # blacklist_devices:
+        #   - /dev/sda
+        #   - /dev/sdb
+        #   - /dev/sdc
+        #   - /dev/sdd
         backends:
           - ibm_storwize
     kernel:
