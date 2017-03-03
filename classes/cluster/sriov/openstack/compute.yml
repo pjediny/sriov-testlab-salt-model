@@ -33,6 +33,16 @@ parameters:
           source: "deb http://apt-mk.mirantis.com/xenial/ nightly mitaka oc311 extra"
           architectures: amd64
           key_url: "http://apt-mk.mirantis.com/public.gpg"
+    storage:
+      multipath:
+        enabled: true
+        blacklist_devices:
+          - /dev/sda
+          - /dev/sdb
+          - /dev/sdc
+          - /dev/sdd
+        backends:
+          - ibm_storwize
     kernel:
       sriov: True
             
