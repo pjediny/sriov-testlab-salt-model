@@ -7,7 +7,7 @@ classes:
 - system.nova.compute.cluster
 - system.opencontrail.compute.cluster
 #- system.ceilometer.agent.cluster
-- system.nova.compute.sriov
+- system.nova.compute.nfv.sriov
 - cluster.sriov
 parameters:
   _param:
@@ -43,8 +43,6 @@ parameters:
         #   - /dev/sdd
         backends:
           - ibm_storwize
-    kernel:
-      sriov: True
             
 ##FIXME
  # linux:
