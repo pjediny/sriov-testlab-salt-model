@@ -1,8 +1,8 @@
 classes:
 
-# this repo is only for xenial
-#- system.linux.system.repo.mcp10
-- system.linux.system.repo.mos92
+# this repo used to be only for xenial, testing now
+- system.linux.system.repo.mcp10
+#- system.linux.system.repo.mos92
 #- system.linux.system.repo.tcp_extra
 - system.linux.system.repo.saltstack_2016_3_trusty 
 - system.memcached.server.single
