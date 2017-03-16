@@ -86,6 +86,9 @@ parameters:
     # openstack_compute_node01_control_address: 10.167.4.101
     # openstack_compute_node02_control_address: 10.167.4.102
     # openstack_compute_node03_control_address: 10.167.4.103
+    # opencontrail compute gateway
+    opencontrail_compute_gateway_node01_single_address: 10.0.175.76
+    opencontrail_compute_gateway_node02_single_address: 10.0.175.77
 
     # openstack service hostnames
     openstack_proxy_hostname: prx
@@ -130,7 +133,9 @@ parameters:
     openstack_compute_node01_hostname: cmp01
     # openstack_compute_node02_hostname: cmp002
     # openstack_compute_node03_hostname: cmp003
-
+    # contrail compute gw
+    opencontrail_compute_gateway_node01_hostname: cmpgw01
+    opencontrail_compute_gateway_node02_hostname: cmpgw02
     ##CI/CD
     #infra_integration_node01_single_address:
     #infra_version_control_node01_single_address:

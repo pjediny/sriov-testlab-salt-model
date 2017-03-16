@@ -147,4 +147,14 @@ parameters:
           address: ${_param:openstack_compute_node01_single_address}
           names:
           - ${_param:openstack_compute_node01_hostname}
-          - ${_param:openstack_compute_node01_hostname}${_param:cluster_domain}
+          - ${_param:openstack_compute_node01_hostname}.${_param:cluster_domain}
+        cmpgw01:
+          address: ${_param:opencontrail_compute_gateway_node01_single_address}
+          names:
+          - ${_param:opencontrail_compute_gateway_node01_hostname}
+          - ${_param:opencontrail_compute_gateway_node01_hostname}.${_param:cluster_domain}
+        cmpgw02:
+          address: ${_param:opencontrail_compute_gateway_node02_single_address}
+          names:
+          - ${_param:opencontrail_compute_gateway_node02_hostname}
+          - ${_param:opencontrail_compute_gateway_node02_hostname}.${_param:cluster_domain}
