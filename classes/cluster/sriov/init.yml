@@ -81,8 +81,8 @@ parameters:
     # stacklight_telemetry_node03_address: 10.167.4.88
     # openstack compute
     openstack_compute_node01_single_address: 10.0.106.112
-    openstack_compute_node01_single_address: 10.0.175.76
-    openstack_compute_node02_single_address: 10.0.175.77
+    openstack_compute_node02_single_address: 10.0.175.76
+    openstack_compute_node03_single_address: 10.0.175.77
 
     # openstack_compute_node02_single_address: 10.167.2.102
     # openstack_compute_node03_single_address: 10.167.2.103
