@@ -74,6 +74,7 @@ parameters:
             salt_master_host: ${_param:reclass_config_master}
             linux_system_codename: trusty
             single_address: ${_param:openstack_compute_node04_single_address}
+            opencontrail_compute_iface: bond0
         infra_compute_node02:
           name: kvm02
           domain: ${_param:cluster_domain}
