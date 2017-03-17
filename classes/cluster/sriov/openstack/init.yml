@@ -148,13 +148,18 @@ parameters:
           names:
           - ${_param:openstack_compute_node01_hostname}
           - ${_param:openstack_compute_node01_hostname}.${_param:cluster_domain}
-        cmp02:
+        cmpg02:
           address: ${_param:openstack_compute_node02_single_address}
           names:
           - ${_param:openstack_compute_node02_hostname}
           - ${_param:openstack_compute_node02_hostname}.${_param:cluster_domain}
-        cmp03:
+        cmpg03:
           address: ${_param:openstack_compute_node03_single_address}
           names:
           - ${_param:openstack_compute_node03_hostname}
           - ${_param:openstack_compute_node03_hostname}.${_param:cluster_domain}
+        cmp04:
+          address: ${_param:openstack_compute_node04_single_address}
+          names:
+          - ${_param:openstack_compute_node04_hostname}
+          - ${_param:openstack_compute_node04_hostname}.${_param:cluster_domain}

@@ -83,6 +83,7 @@ parameters:
     openstack_compute_node01_single_address: 10.0.106.112
     openstack_compute_node02_single_address: 10.0.175.76
     openstack_compute_node03_single_address: 10.0.175.77
+    openstack_compute_node04_single_address: 10.0.103.9
 
     # openstack_compute_node02_single_address: 10.167.2.102
     # openstack_compute_node03_single_address: 10.167.2.103
@@ -133,6 +134,7 @@ parameters:
     openstack_compute_node01_hostname: cmp01
     openstack_compute_node02_hostname: cmpg02
     openstack_compute_node03_hostname: cmpg03
+    openstack_compute_node04_hostname: cmp04
     
     ##CI/CD
     #infra_integration_node01_single_address:
