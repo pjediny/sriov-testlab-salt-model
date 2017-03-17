@@ -56,6 +56,7 @@ parameters:
             single_address: ${_param:openstack_compute_node02_single_address}
             opencontrail_compute_iface: eth0
             opencontrail_compute_gateway: 10.0.174.1
+            opencontrail_compute_iface_mask: 23
         openstack_compute_node03:
           name: ${_param:openstack_compute_node03_hostname}
           domain: ${_param:cluster_domain}
@@ -67,6 +68,7 @@ parameters:
             single_address: ${_param:openstack_compute_node03_single_address}
             opencontrail_compute_iface: eth0
             opencontrail_compute_gateway: 10.0.174.1
+            opencontrail_compute_iface_mask: 23
         openstack_compute_node04:
           name: ${_param:openstack_compute_node04_hostname}
           domain: ${_param:cluster_domain}
