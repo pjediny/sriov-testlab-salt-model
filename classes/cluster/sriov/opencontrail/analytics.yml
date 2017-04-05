@@ -1,10 +1,8 @@
 classes:
-
-- system.linux.system.repo.mos92
-#- system.linux.system.repo.tcp_extra
-- system.linux.system.repo.saltstack_2016_3_trusty
-
-#- system.linux.system.repo.contrail
+- system.linux.system.repo.mcp.openstack
+- system.linux.system.repo.mcp.extra
+- system.linux.system.repo.saltstack.trusty
+- system.linux.system.repo.mcp.contrail
 - system.opencontrail.control.analytics
 - cluster.sriov
 parameters:
@@ -23,9 +21,4 @@ parameters:
     network:
       interface:
         eth0: ${_param:linux_single_interface}
-    system:
-      repo:
-        contrail:
-          source: "deb http://apt-mk.mirantis.com/trusty/ nightly mitaka oc311 extra"
-          architectures: amd64
-          key_url: "http://apt-mk.mirantis.com/public.gpg"
+
