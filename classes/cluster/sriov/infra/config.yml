@@ -73,12 +73,12 @@ parameters:
           name: ${_param:openstack_compute_node04_hostname}
           domain: ${_param:cluster_domain}
           classes:
-          - cluster.${_param:cluster_name}.openstack.compute
+          - cluster.${_param:cluster_name}.openstack.dpdk_compute
           params:
             salt_master_host: ${_param:reclass_config_master}
-            linux_system_codename: trusty
+            linux_system_codename: xenial
             single_address: ${_param:openstack_compute_node04_single_address}
-            opencontrail_compute_iface: bond0
+            opencontrail_compute_iface: enp4s0f2
             opencontrail_compute_gateway: 10.0.103.1
         infra_compute_node02:
           name: kvm02

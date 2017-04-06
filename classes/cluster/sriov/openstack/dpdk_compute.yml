@@ -1,0 +1,53 @@
+classes:
+- system.linux.system.repo.mcp.contrail
+- system.linux.system.repo.tcp_extra
+- system.linux.system.repo.saltstack.xenial
+- system.linux.system.repo.contrail
+- system.nova.compute.cluster
+- system.nova.compute.nfv.hugepages
+- system.opencontrail.compute.cluster
+- system.opencontrail.compute.dpdk
+- cluster.sriov
+parameters:
+  _param:
+    cluster_vip_address: ${_param:openstack_control_address}
+    cluster_local_address: ${_param:single_address}
+    cluster_node01_hostname: ctl01
+    cluster_node01_address: ${_param:openstack_control_node01_address}
+    cluster_node02_hostname: ctl02
+    cluster_node02_address: ${_param:openstack_control_node02_address}
+    cluster_node03_hostname: ctl03
+    cluster_node03_address: ${_param:openstack_control_node03_address}
+    opencontrail_compute_address: ${_param:single_address}
+    nova_vncproxy_url: https://${_param:openstack_proxy_address}:6080
+    compute_vrouter_dpdk_mac_address: 90:e2:ba:7c:22:e1
+    compute_vrouter_dpdk_pci: 0000:81:00.1
+    compute_vrouter_socket_mem: 1024
+    compute_vrouter_taskset: "-c 1,2"
+    compute_hugepages_count: 1024
+
+  linux:
+    system:
+      repo:
+        contrail:
+          source: "deb http://apt-mk.mirantis.com/xenial/ nightly mitaka oc311 extra"
+          architectures: amd64
+          key_url: "http://apt-mk.mirantis.com/public.gpg"
+      package:
+        liburcu4:
+          version: 0.9.1-3
+    network:
+      interface:
+        vhost0:
+          type: dpdk
+    #storage:
+    #  multipath:
+    #    enabled: true
+        # blacklist_devices:
+        #   - /dev/sda
+        #   - /dev/sdb
+        #   - /dev/sdc
+        #   - /dev/sdd
+    #    backends:
+    #      - ibm_storwize
+ 
