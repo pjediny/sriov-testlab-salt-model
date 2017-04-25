@@ -5,8 +5,11 @@ classes:
 - system.linux.system.repo.contrail
 - system.nova.compute.cluster
 - system.nova.compute.nfv.hugepages
+- system.nova.compute.nfv.cpu_pinning
 - system.opencontrail.compute.cluster
 - system.opencontrail.compute.dpdk
+- system.opencontrail.client.cluster
+- system.opencontrail.client.resource.virtual_router
 - cluster.sriov
 parameters:
   _param:
@@ -25,7 +28,13 @@ parameters:
     compute_vrouter_socket_mem: 1024
     compute_vrouter_taskset: "-c 1,2"
     compute_hugepages_count: 1024
+    nova_cpu_pinning: "1,2,3,4,5,7,8,9,10,11"
+    compute_kernel_isolcpu: ${_param:nova_cpu_pinning}
 
+  opencontrail:
+    compute:
+      interface:
+        address: 10.0.106.9
   linux:
     system:
       repo:
@@ -39,15 +48,22 @@ parameters:
     network:
       interface:
         vhost0:
-          type: dpdk
-    #storage:
-    #  multipath:
-    #    enabled: true
+          enabled: true
+          type: eth
+          mtu: 9000
+          address: 10.0.106.9
+          netmask: 255.255.255.0
+          name_servers:
+          - 8.8.8.8
+          - 8.8.4.4
+    storage:
+      multipath:
+        enabled: true
         # blacklist_devices:
         #   - /dev/sda
         #   - /dev/sdb
         #   - /dev/sdc
         #   - /dev/sdd
-    #    backends:
-    #      - ibm_storwize
+        backends:
+          - ibm_storwize
  

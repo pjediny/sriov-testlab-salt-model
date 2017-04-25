@@ -78,8 +78,8 @@ parameters:
             salt_master_host: ${_param:reclass_config_master}
             linux_system_codename: xenial
             single_address: ${_param:openstack_compute_node04_single_address}
-            opencontrail_compute_iface: enp4s0f2
-            opencontrail_compute_gateway: 10.0.103.1
+            opencontrail_compute_iface: enp129s0f1
+            opencontrail_compute_gateway: 10.0.106.1
         infra_compute_node02:
           name: kvm02
           domain: ${_param:cluster_domain}
