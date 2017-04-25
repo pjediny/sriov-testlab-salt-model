@@ -29,3 +29,10 @@ parameters:
           names:
           - ctl
           - ctl.${_param:cluster_domain}
+  opencontrail:
+    config:
+      identity:
+        version: '3'
+    web:
+      identity:
+        version: '3'
